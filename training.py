@@ -3,7 +3,6 @@ import sys
 import time
 import random
 import datetime
-import pyautogui
 from psychopy import visual
 
 FILE_NAME = "NO_NAME_PROVIDED"
@@ -13,12 +12,7 @@ if (len(sys.argv) > 1):
     FILE_NAME = str(sys.argv[1])
 
 # Get window size
-try:
-    SCREEN_WIDTH, SCREEN_HEIGHT = pyautogui.size()
-except:
-    print("pyautogui failed to capture screen size - please hardcode SCREEN_WIDTH, SCREEN_HEIGHT in code!")
-    # Set your display size here
-    SCREEN_WIDTH, SCREEN_HEIGHT = (600,360)
+SCREEN_WIDTH, SCREEN_HEIGHT = (600,360)
 
 # Rotate data: SET THIS TO FALSE IF YOUR OUTPUT IS NOT MIRRORED
 ROTATE_DATA = True
